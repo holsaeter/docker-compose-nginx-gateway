@@ -5,7 +5,6 @@ services:
     container_name: 'rabbitmq'
     ports:
       - 5672:5672
-      - 15672:15672
   model1:
     build: model1/.
   model2:
