@@ -1,5 +1,5 @@
 FROM golang
-WORKDIR /go/src/github.com/Pungyeon/tea
+WORKDIR /go/src/ddhub/model1
 COPY main.go .
 RUN go build main.go
 EXPOSE 8080

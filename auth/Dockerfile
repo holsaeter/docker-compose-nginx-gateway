@@ -1,5 +1,5 @@
 FROM golang
-WORKDIR /go/src/github.com/Pungyeon/auth
+WORKDIR /go/src/ddhub/auth
 COPY main.go .
 RUN go build main.go
 EXPOSE 8080

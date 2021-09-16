@@ -1,9 +1,9 @@
 version: '3'
 services:
-  coffee:
-    build: coffee/.
-  tea:
-    build: tea/.
+  model1:
+    build: model1/.
+  model2:
+    build: model2/.
   auth:
     build: auth/.
   nginx:

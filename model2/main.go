@@ -6,16 +6,16 @@ import (
 	"os"
 )
 
-func teaHandler(w http.ResponseWriter, r *http.Request) {
+func modelHandler(w http.ResponseWriter, r *http.Request) {
 	servant, err := os.Hostname()
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 		return
 	}
-	w.Write([]byte("Your Tea has been served by - " + servant))
+	w.Write([]byte("This is a another seperate microservice. Hostname: " + servant))
 }
 
 func main() {
-	http.HandleFunc("/tea", teaHandler)
+	http.HandleFunc("/model2", modelHandler)
 	log.Fatal(http.ListenAndServe(":8080", nil))
 }
